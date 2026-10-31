@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panduan gunung untuk pendaki pemula di Jawa Barat: pilihan gunung, persiapan, dan form gabung open trip.">
+  <title>Gabung Open Trip | Trailhead Jabar</title>
+</head>
+<body>
+  <header>
+    <h1>Trailhead Jabar</h1>
+    <p>Panduan pendakian pemula di Jawa Barat</p>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="gunung.html">Pilih Gunung</a></li>
+        <li><a href="persiapan.html">Persiapan</a></li>
+        <li><a href="daftar.html">Gabung Open Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+
+  <main>
+    <section>
+      <h2>Gabung Open Trip</h2>
+      <p>Mau ikut pendakian bareng? Isi form di bawah. Kolom yang ada tulisan wajib harus diisi. Ini cuma tugas kuliah, jadi data yang kamu isi nggak dikirim ke mana-mana.</p>
+
+      <form action="terima.html" method="get">
+        <fieldset>
+          <legend>Data diri</legend>
+          <p>
+            <label for="nama">Nama lengkap (wajib):</label><br>
+            <input type="text" id="nama" name="nama" required minlength="3" maxlength="60" placeholder="Nama kamu">
+          </p>
+          <p>
+            <label for="email">Email (wajib):</label><br>
+            <input type="email" id="email" name="email" required placeholder="nama@contoh.com">
+          </p>
+          <p>
+            <label for="wa">Nomor WhatsApp (wajib):</label><br>
+            <input type="tel" id="wa" name="wa" required pattern="[0-9]{10,14}" placeholder="08xxxxxxxxxx">
+          </p>
+          <p>
+            <label for="umur">Usia (wajib):</label><br>
+            <input type="number" id="umur" name="umur" required min="12" max="70">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Rencana pendakian</legend>
+          <p>
+            <label for="gunung">Gunung yang dipilih (wajib):</label><br>
+            <select id="gunung" name="gunung" required>
+              <option value="">-- Pilih gunung --</option>
+              <option value="tangkuban-perahu">Tangkuban Perahu</option>
+              <option value="kawah-ratu">Kawah Ratu (Gunung Salak)</option>
+              <option value="papandayan">Papandayan</option>
+              <option value="puntang">Puntang</option>
+              <option value="burangrang">Burangrang</option>
+              <option value="gede">Gede</option>
+            </select>
+          </p>
+          <p>
+            <label for="tanggal">Tanggal berangkat (wajib):</label><br>
+            <input type="date" id="tanggal" name="tanggal" required>
+          </p>
+          <p>Pengalaman mendaki (wajib):</p>
+          <p>
+            <input type="radio" id="exp-belum" name="pengalaman" value="belum" required>
+            <label for="exp-belum">Belum pernah</label>
+            <input type="radio" id="exp-sedikit" name="pengalaman" value="sedikit">
+            <label for="exp-sedikit">1 sampai 3 kali</label>
+            <input type="radio" id="exp-sering" name="pengalaman" value="sering">
+            <label for="exp-sering">Lebih dari 3 kali</label>
+          </p>
+          <p>Perlengkapan yang sudah kamu punya:</p>
+          <p>
+            <input type="checkbox" id="alat-sepatu" name="alat" value="sepatu">
+            <label for="alat-sepatu">Sepatu trekking</label>
+            <input type="checkbox" id="alat-jaket" name="alat" value="jaket">
+            <label for="alat-jaket">Jaket</label>
+            <input type="checkbox" id="alat-jasujan" name="alat" value="jas-hujan">
+            <label for="alat-jasujan">Jas hujan</label>
+            <input type="checkbox" id="alat-headlamp" name="alat" value="headlamp">
+            <label for="alat-headlamp">Headlamp</label>
+          </p>
+          <p>
+            <label for="catatan">Catatan kesehatan atau alergi:</label><br>
+            <textarea id="catatan" name="catatan" rows="5" cols="40" maxlength="300" placeholder="Misalnya asma, alergi makanan, atau lainnya"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+          <label for="setuju">Data di atas sudah benar dan saya siap ikut aturan pendakian (wajib).</label>
+        </p>
+
+        <p>
+          <button type="submit">Kirim</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+
+    <aside>
+      <h2>Masih bingung pilih gunung?</h2>
+      <p>Lihat dulu <a href="gunung.html">tabel gunung pemula</a>.</p>
+    </aside>
+  </main>
+
+  <hr>
+  <footer>
+    <p>Dibuat untuk tugas praktikum Desain Web, Sistem Informasi ITPLN.</p>
+    <p><a href="index.html">Beranda</a> | <a href="gunung.html">Pilih Gunung</a> | <a href="persiapan.html">Persiapan</a> | <a href="daftar.html">Gabung Open Trip</a></p>
+  </footer>
+</body>
+</html>
